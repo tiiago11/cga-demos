@@ -8,13 +8,11 @@
 
 #version 400
 
-layout(location = 0) out vec4 FragColor;
-
 uniform sampler2D colorTextureSampler;
 
 in vec2 teTexCoord;
 
 void main()
 {
-	FragColor = texture2D(colorTextureSampler, teTexCoord);
+	gl_FragColor = texture2D(colorTextureSampler, teTexCoord);
 }

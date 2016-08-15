@@ -10,7 +10,6 @@
 in vec2 TexCoord; // Coordenada de textura enviada pelo FS
 layout (binding = 0) uniform sampler2D Texture1; // binding = 0 eh equivalente a GL_TEXTURE0.
 layout (binding = 1) uniform sampler2D Texture2; // binding = 1 eh equivalente a GL_TEXTURE1.
-layout (location = 0) out vec4 FragColor;
 
 void main() 
 {
@@ -21,5 +20,5 @@ void main()
 
 	//Interpola linearmente as duas cores utilizando a coordenada X da textura
 	//ou seja, linearmente da esquerda para a direita.
-    FragColor = mix(col1, col2, TexCoord.x);
+    gl_FragColor = mix(col1, col2, TexCoord.x);
 }

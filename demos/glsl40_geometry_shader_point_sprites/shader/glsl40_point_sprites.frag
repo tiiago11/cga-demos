@@ -9,9 +9,7 @@
 
 in vec3 gColor;
 
-layout( location = 0 ) out vec4 FragColor;
-
 void main()
 {
-	FragColor = vec4(gColor, 1.0);
+	gl_FragColor = vec4(gColor, 1.0);
 }
